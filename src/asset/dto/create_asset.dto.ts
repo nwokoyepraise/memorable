@@ -24,15 +24,15 @@ export class CreateAssetDto {
   @Field()
   extension: Extension;
 
-  @Field()
+  @Field({defaultValue: new Date()})
   date_added: Date;
 
-  @Field()
+  @Field({nullable: true})
   score_type1: number;
 
-  @Field()
+  @Field({nullable: true})
   score_type2: number;
 
-  @Field()
+  @Field({nullable: true})
   score_type3: number;
 }

@@ -8,9 +8,9 @@ type AssetModel {
   filename: String!
   extension: String!
   time_added: DateTime!
-  score_type1: Float!
-  score_type2: Float!
-  score_type3: Float!
+  score_type1: Float
+  score_type2: Float
+  score_type3: Float
 }
 
 """
@@ -31,8 +31,8 @@ input CreateAssetDto {
   asset_type: String!
   filename: String!
   extension: String!
-  date_added: DateTime!
-  score_type1: Float!
-  score_type2: Float!
-  score_type3: Float!
+  date_added: DateTime = "2022-03-22T21:47:58.829Z"
+  score_type1: Float
+  score_type2: Float
+  score_type3: Float
 }

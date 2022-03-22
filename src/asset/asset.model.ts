@@ -1,4 +1,5 @@
 import { ObjectType, Field } from '@nestjs/graphql';
+
 import {
   Entity,
   Column,
@@ -6,7 +7,8 @@ import {
   CreateDateColumn,
 } from 'typeorm';
 
-@ObjectType()
+
+@ObjectType({})
 @Entity('assets')
 export class AssetModel {
   @Field()
@@ -30,15 +32,15 @@ export class AssetModel {
   @CreateDateColumn()
   time_added: Date;
 
-  @Field()
-  @Column({ nullable: false })
+  @Field({nullable: true})
+  @Column({ nullable: true})
   score_type1: number;
 
-  @Field()
-  @Column({ nullable: false })
+  @Field({nullable: true})
+  @Column({ nullable: true})
   score_type2: number;
 
-  @Field()
-  @Column({ nullable: false })
+  @Field({nullable: true})
+  @Column({ nullable: true })
   score_type3: number;
 }
