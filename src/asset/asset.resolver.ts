@@ -2,6 +2,7 @@ import { AssetModel } from "./asset.model";
 import { AssetService } from "./asset.service";
 import { Resolver, Mutation, Args, Query, ResolveField, Parent} from "@nestjs/graphql";
 import { Inject } from "@nestjs/common";
+import { CreateAssetDto } from "./dto/create_asset.dto";
 
 @Resolver(of => AssetModel)
 export class AssetResolver {
@@ -17,6 +18,13 @@ export class AssetResolver {
     @Query(()=> String)
     hello(): string {
         return 'Memorable rocks!';
+    }
+
+    @Mutation(returns => AssetModel)
+    async createAsset (
+        @Args('asset') asset: CreateAssetDto
+    ): Promise<AssetModel> {
+        return await this.assetService.createOne(asset);
     }
 
 }

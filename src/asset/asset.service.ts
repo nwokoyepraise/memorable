@@ -15,7 +15,7 @@ export class AssetService {
     return this.assetRepository.findOne(id);
   }
 
-  async addOne(asset: CreateAssetDto): Promise<AssetModel> {
+  async createOne(asset: CreateAssetDto): Promise<AssetModel> {
       return this.assetRepository.save(asset);
   }
 }

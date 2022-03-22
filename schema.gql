@@ -22,3 +22,18 @@ type Query {
   asset(id: String!): AssetModel!
   hello: String!
 }
+
+type Mutation {
+  createAsset(asset: CreateAssetDto!): AssetModel!
+}
+
+input CreateAssetDto {
+  id: String!
+  asset_type: String!
+  filename: String!
+  extension: String!
+  date_added: DateTime!
+  score_type1: Float!
+  score_type2: Float!
+  score_type3: Float!
+}
