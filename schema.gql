@@ -25,14 +25,21 @@ type Query {
 
 type Mutation {
   createAsset(asset: CreateAssetDto!): AssetModel!
+  addScores(scores: AddScoresDto!, id: String!): AssetModel!
 }
 
 input CreateAssetDto {
   asset_type: String!
   filename: String!
   extension: String!
-  date_added: DateTime = "2022-03-22T21:47:58.829Z"
+  date_added: DateTime = "2022-03-22T22:21:41.837Z"
   score_type1: Float
   score_type2: Float
   score_type3: Float
+}
+
+input AddScoresDto {
+  score_type1: Float!
+  score_type2: Float!
+  score_type3: Float!
 }
