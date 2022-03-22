@@ -20,5 +20,5 @@ scalar DateTime
 
 type Query {
   asset(id: String!): AssetModel!
-  sayHello: String!
+  hello: String!
 }

@@ -15,8 +15,8 @@ export class AssetResolver {
     }
 
     @Query(()=> String)
-    sayHello(): string {
-        return 'Hello World!';
+    hello(): string {
+        return 'Memorable rocks!';
     }
 
 }

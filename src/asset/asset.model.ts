@@ -2,7 +2,7 @@ import { ObjectType, Field } from "@nestjs/graphql";
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToMany } from "typeorm";
 
 @ObjectType()
-@Entity()
+@Entity('assets')
 export class AssetModel {
     @Field()
     @PrimaryGeneratedColumn("uuid")
