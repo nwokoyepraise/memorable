@@ -1,5 +1,4 @@
 import { Field, InputType } from '@nestjs/graphql';
-import { EnumTypeExtensionNode } from 'graphql';
 
 enum FileType {
   video = 'video',
@@ -13,8 +12,8 @@ enum Extension {
 
 @InputType()
 export class CreateAssetDto {
-  @Field()
-  id: string;
+  // @Field()
+  // id: string;
 
   @Field()
   asset_type: FileType;

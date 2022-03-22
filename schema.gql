@@ -28,7 +28,6 @@ type Mutation {
 }
 
 input CreateAssetDto {
-  id: String!
   asset_type: String!
   filename: String!
   extension: String!
