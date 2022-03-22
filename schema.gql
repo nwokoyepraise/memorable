@@ -1,0 +1,24 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AssetModel {
+  id: String!
+  asset_type: String!
+  filename: String!
+  extension: String!
+  time_added: DateTime!
+  score_type1: Float!
+  score_type2: Float!
+  score_type3: Float!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  asset(id: String!): AssetModel!
+  sayHello: String!
+}
