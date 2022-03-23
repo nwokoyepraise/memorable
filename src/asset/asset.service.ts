@@ -14,10 +14,12 @@ export class AssetService {
     private assetRepository: Repository<AssetModel>,
   ) {}
 
+  //function to find asset by ID
   findOne(id: string): Promise<AssetModel> {
     return this.assetRepository.findOne(id);
   }
 
+  //function to create asset
   async createOne(asset: CreateAssetDto): Promise<AssetModel> {
     return this.assetRepository.save({
       id: uuidv4(),
@@ -28,6 +30,7 @@ export class AssetService {
     });
   }
 
+  //function to add score to an asset using it's ID
   async addScores(id: string, scores: AddScoresDto): Promise<AssetModel> {
     await this.assetRepository.update(id, {
       //   ...(user.name && { name: user.name })
@@ -39,6 +42,7 @@ export class AssetService {
     return this.assetRepository.findOneOrFail(id);
   }
 
+  //function to get average score by asset_type and score_type
   async getAverageScore(
     asset_type: string,
     score_type: string,
@@ -57,6 +61,7 @@ export class AssetService {
         field = 'score_type3';
         break;
     }
+    //Get data from asset repository
     let data = await this.assetRepository
       .createQueryBuilder('assets')
       .select(['id', 'time_added', field])
@@ -68,6 +73,7 @@ export class AssetService {
       sum += element[field];
     });
 
+    //return average score
     return { average_score: sum / data.length };
   }
 }
