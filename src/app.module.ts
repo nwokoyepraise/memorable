@@ -6,7 +6,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
-console.log(process.env.DATABASE_URL);
+
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -21,7 +21,7 @@ console.log(process.env.DATABASE_URL);
       // username: process.env.POSTGRES_USER,
       // password: process.env.POSTGRES_PASSWORD,
       // database: 'memorabledb',
-      url: process.env.DATABASE_URL,
+      url: process.env.DATABASE_URL || process.env.POSTGRES_CONN_URL,
       ssl: {requestCert: true, rejectUnauthorized: false},
       entities: ['dist/**/*.model.js'],
       synchronize: false,
