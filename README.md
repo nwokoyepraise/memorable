@@ -1,30 +1,132 @@
+# Memorable
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+  <a href="https://www.memorableai.com/">
+    <img src="https://user-images.githubusercontent.com/65955286/159771902-0c5f42ec-0610-4fb3-a706-63f4e15a4758.png" alt="Logo">
+  </a>
+ 
+ <h2>Memorable Backend Application  </h2>
+ </P>
+
+ <p align="center">
+    <br />
+    <a href="https://github.com/nwokoyepraise/memorable"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://heroku-memorableai-38ah2.herokuapp.com/graphql">View Demo</a>
+    ·
+    <a href="https://github.com/nwokoyepraise/memorable/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/nwokoyepraise/memorable/issues">Request Feature</a>
+  </p>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+    </li>
+    <li><a href="#api-endpoints">API Endpoints</a></li>
+    <li><a href="#uml-diagrams">UML Diagrams</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+This project is a demo backend assessment for Memorable 
+Memorable is linked at <a href="https://www.memorableai.com/">here</a>
+
+<!-- END POINTS -->
+## Services Available on the Backend
+- Asset Creation
+- Highly Customizable Asset Query
+- Asset Update
+- Retrieve Average Metric Data for Field
+
+### Built With
+
+The project was built natively with the following technologies
+* [Node.js](https://nodejs.org)
+* [NestJs](https://nestjs.com/)
+* [Typescript](https://www.typescriptlang.org/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [TypeORM](https://typeorm.io/#/)
+* [GraphQL](https://graphql.org/)
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To build the project locally, simply clone the github repository. Navigate to root project folder and run the following to install packages:
+
+```bash
+# Install packages
+$ npm install
+```
+
+After packages have been installed. Proceed to run:
+
+`npm start`
+
+## API Endpoint
+
+***Base API: http://localhost:3000/graphql
+
+### Create Asset
+```curl 
+'http://localhost:3000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:3000' --data-binary '{"query":"mutation {\n  createAsset(\n    asset: { filename: \"file0001\", asset_type: \"image\", extension: \"png\" }\n  ) {\n    id\n    filename\n    asset_type\n    extension\n    time_added\n    score_type1\n    score_type2\n    score_type3\n  }\n}\n"}' --compressed
+```
+
+![image](https://user-images.githubusercontent.com/65955286/159782126-18a82948-4462-4209-ad5d-a4d3416d9173.png)
+
+
+### Get Asset
+```curl 
+'http://localhost:3000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:3000' --data-binary '{"query":"# Write your query or mutation here\nquery {\n  asset(id:\"f90ae0ee-7ca4-4668-b6da-3e48f6840720\"){\n    filename\n    score_type1\n    score_type2\n}\n}"}' --compressed
+```
+
+![image](https://user-images.githubusercontent.com/65955286/159782975-15398dc5-ad84-4bb9-a0a0-c3d4443d3750.png)
+
+### Update Asset Scores
+```curl
+'http://localhost:3000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:3000' --data-binary '{"query":"mutation {\n  addScores(\n    id: \"ca9346f2-8a86-428f-8fac-a6dc17b08c0d\"\n    scores: { score_type1: 20, score_type2: 99, score_type3: 23 }\n  ) {\n    id\n    score_type1\n    score_type2\n    score_type3\n    filename\n    extension\n  }\n}\n"}' --compressed
+```
+
+![image](https://user-images.githubusercontent.com/65955286/159783472-9ad8739d-21c6-4d98-90b1-d2fef6fedd72.png)
+
+### Retrieve Average Score By Asset and Score Type
+```curl
+'http://localhost:3000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:3000' --data-binary '{"query":"query {\n  getAverage(asset_type: \"image\", score_type: \"Type1\") {\n    average_score\n  }\n}\n"}' --compressed
+```
+
+![image](https://user-images.githubusercontent.com/65955286/159783847-7eb5d128-4852-4240-951b-a14b95b26a67.png)
+
+<!-- UML DIAGRAM -->
+## UML Diagrams
+
+### DB Diagram:
+
+
+![memorable_asset](https://user-images.githubusercontent.com/65955286/159785931-8f52cd50-e079-4f18-af1b-624aa24f809a.svg)
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
 
 ## Installation
 
