@@ -6,7 +6,6 @@ import { CreateAssetDto } from './dto/create_asset.dto';
 import { v4 as uuidv4 } from 'uuid';
 import { AddScoresDto } from './dto/add_scores.dto';
 import { AverageScoreDto } from './dto/average_score.dto';
-import { formatError } from 'graphql';
 
 @Injectable()
 export class AssetService {
@@ -26,9 +25,6 @@ export class AssetService {
       filename: asset.filename,
       extension: asset.extension,
       date_added: asset.date_added,
-      score_type1: asset.score_type1,
-      score_type2: asset.score_type2,
-      score_type3: asset.score_type3,
     });
   }
 
@@ -72,6 +68,6 @@ export class AssetService {
       sum += element[field];
     });
 
-    return { average_score: sum / data.length }; 
+    return { average_score: sum / data.length };
   }
 }

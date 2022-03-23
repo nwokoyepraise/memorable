@@ -1,14 +1,5 @@
 import { Field, InputType } from '@nestjs/graphql';
-
-enum FileType {
-  video = 'video',
-  image = 'image',
-}
-
-enum Extension {
-  mp4 = 'mp4',
-  png = 'png',
-}
+import { Max, Min } from 'class-validator';
 
 @InputType()
 export class CreateAssetDto {
@@ -16,23 +7,14 @@ export class CreateAssetDto {
   // id: string;
 
   @Field()
-  asset_type: FileType;
+  asset_type: string;
 
   @Field()
   filename: string;
 
   @Field()
-  extension: Extension;
+  extension: string;
 
-  @Field({defaultValue: new Date()})
+  @Field({ defaultValue: new Date() })
   date_added: Date;
-
-  @Field({nullable: true})
-  score_type1: number;
-
-  @Field({nullable: true})
-  score_type2: number;
-
-  @Field({nullable: true})
-  score_type3: number;
 }
