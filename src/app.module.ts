@@ -5,7 +5,7 @@ import { AssetModule } from './asset/asset.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AssetResolver } from './asset/asset.resolver';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -13,16 +13,19 @@ import { AssetResolver } from './asset/asset.resolver';
       driver: ApolloDriver,
       autoSchemaFile: 'schema.gql',
     }),
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'nwokoyepraise',
-      password: 'vyfuf87rt78rr67rsjr768r',
-      database: 'memorabledb',
-      entities: ['dist/**/*.model.js'],
-      synchronize: false,
-    }),
+    ConfigModule.forRoot(),
+    TypeOrmModule.forRoot(
+      {
+        type: 'postgres',
+        host: 'localhost',
+        port: 5432,
+        username: process.env.POSTGRES_USER,
+        password: process.env.POSTGRES_PASSWORD,
+        database: process.env.POSTGRES_DB,
+        entities: ['dist/**/*.model.js'],
+        synchronize: false,
+      }
+    ),
    AssetModule,
   ],
   controllers: [AppController],
