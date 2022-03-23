@@ -1,16 +1,13 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { GraphQLInputType } from 'graphql';
-import { ObjectType } from 'typeorm';
-import { AssetModel } from './asset.model';
 import { AssetResolver } from './asset.resolver';
 import { AssetService } from './asset.service';
 import { AddScoresDto } from './dto/add_scores.dto';
 import { AverageScoreDto } from './dto/average_score.dto';
 import { CreateAssetDto } from './dto/create_asset.dto';
 
-type MockType<T> = {
-  [P in keyof T]?: jest.Mock<{}>;
-};
+// type MockType<T> = {
+//   [P in keyof T]?: jest.Mock<{}>;
+// };
 
 // const repositoryMockFactory: () => MockType<AssetModel> = jest.fn(() => ({
 //   findOne: jest.fn((entity) => entity),
@@ -34,7 +31,7 @@ describe('-- Unit Test For AssetResolver --', () => {
               id: id,
               asset_type: 'image',
               extension: 'png',
-              date_added: '2022-03-22 18:31:47.0009+01',
+              time_added: new Date ('2022-03-22 18:31:47.0009+01'),
             })),
             addScores: jest.fn((id: number, scores: AddScoresDto) => ({
               id: id,
@@ -63,7 +60,7 @@ describe('-- Unit Test For AssetResolver --', () => {
       id: '12345',
       asset_type: 'image',
       extension: 'png',
-      date_added: '2022-03-22 18:31:47.0009+01',
+      time_added: new Date ('2022-03-22 18:31:47.0009+01'),
     });
   });
 
