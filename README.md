@@ -12,7 +12,7 @@
     <a href="https://github.com/nwokoyepraise/memorable"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://heroku-memorableai-38ah2.herokuapp.com/graphql">View Demo</a>
+    <a href="https://heroku-memorableai-38ah2.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/nwokoyepraise/memorable/issues">Report Bug</a>
     ·
