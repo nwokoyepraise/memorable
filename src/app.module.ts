@@ -22,6 +22,7 @@ console.log(process.env.DATABASE_URL);
       // password: process.env.POSTGRES_PASSWORD,
       // database: 'memorabledb',
       url: process.env.DATABASE_URL,
+      ssl: {requestCert: true, rejectUnauthorized: false},
       entities: ['dist/**/*.model.js'],
       synchronize: false,
     }),
