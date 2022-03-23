@@ -16,5 +16,5 @@ export class CreateAssetDto {
   extension: string;
 
   @Field({ defaultValue: new Date() })
-  date_added: Date;
+  time_added: Date;
 }

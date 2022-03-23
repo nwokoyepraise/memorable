@@ -26,7 +26,6 @@ export class AssetService {
       asset_type: asset.asset_type,
       filename: asset.filename,
       extension: asset.extension,
-      date_added: asset.date_added,
     });
   }
 
