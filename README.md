@@ -124,15 +124,6 @@ After packages have been installed. Proceed to run:
 
 ![memorable_asset](https://user-images.githubusercontent.com/65955286/159785931-8f52cd50-e079-4f18-af1b-624aa24f809a.svg)
 
-## Description
-
-
-
-## Installation
-
-```bash
-$ npm install
-```
 
 ## Running the app
 
@@ -159,17 +150,31 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+<!-- ROADMAP -->
+## Roadmap
 
+See the [open issues](https://github.com/nwokoyepraise/memorable/issues) for a list of proposed features (and known issues).
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+.
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is [GNU-V3](LICENSE).
