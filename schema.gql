@@ -37,7 +37,7 @@ input CreateAssetDto {
   asset_type: String!
   filename: String!
   extension: String!
-  time_added: DateTime = "2022-03-23T19:43:05.370Z"
+  time_added: DateTime = "2022-04-13T17:24:36.619Z"
 }
 
 input AddScoresDto {
